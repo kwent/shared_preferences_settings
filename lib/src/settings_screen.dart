@@ -394,7 +394,7 @@ class __SettingsTileState extends State<_SettingsTile>
       children: <Widget>[
         ListTile(
           leading: widget.icon ?? widget.leading,
-          title: Text(widget.title, style: TextStyle(color: Theme.of(context).primaryColorLight)),
+          title: Text(widget.title, style: TextStyle(fontSize: 18.0, color: Theme.of(context).primaryColorLight)),
           subtitle: _buildSubtitle(),
           onTap: _shouldDisableTap(enabled)
               ? null
@@ -417,7 +417,7 @@ class __SettingsTileState extends State<_SettingsTile>
 
   Widget _buildSubtitle() {
     Widget subtitleWidget =
-        widget.subtitle != null ? Text(widget.subtitle, style: TextStyle(color: Theme.of(context).primaryColorLight)) : null;
+        widget.subtitle != null ? Text(widget.subtitle, style: TextStyle(fontSize: 16.0, color: Theme.of(context).primaryColorLight)) : null;
     if (widget.child == null) {
       return subtitleWidget;
     }
